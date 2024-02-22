@@ -14,7 +14,7 @@ class CPF(Luhn, ValuesRegex):
     @staticmethod
     def calculate_digits(non_digits: list[int]) -> tuple[int, int]:
         """
-            Cálculo dos dois dígitos verificadores de CPF.
+            CPF's digits checking algorithm.
             https://web.archive.org/web/20240222143146/http://clubes.obmep.org.br/blog/a-matematica-nos-documentos-a-matematica-dos-cpfs/
         """
         calc = sum(n * (10 - i) for i, n in enumerate(non_digits)) % 11

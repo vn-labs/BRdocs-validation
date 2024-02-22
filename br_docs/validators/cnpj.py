@@ -15,8 +15,8 @@ class CNPJ(Luhn, ValuesRegex):
     @classmethod
     def calculate_digits(cls, non_digits: list[int]) -> tuple[int, int]:
         """
-            Cálculo dos dois dígitos verificadores de CNPJ.
-            https://www.macoratti.net/alg_cnpj.htm
+            CNPJ's digits checking algorithm.
+            https://web.archive.org/web/20240222180515/https://www.macoratti.net/alg_cnpj.htm
         """
         calc = sum(x*y for x, y in zip(non_digits, cls.CnpjAlgarisms[1:])) % 11
         if calc < 2:
