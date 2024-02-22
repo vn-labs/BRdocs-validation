@@ -1,7 +1,6 @@
 import re
 
-from br_docs.validators.types.format import ValuesRegex
-from br_docs.validators.types.validation import Luhn
+from br_docs.validators.types import *
 
 
 class CPF(Luhn, ValuesRegex):
