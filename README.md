@@ -1,9 +1,9 @@
 ## Supported docs and its formats
 
-| Supports |                   Format                    |
-|:--------:|:-------------------------------------------:|
-|   CNPJ   |   Without special chars or $$$.$$$.$$$-$$   |
-|   CPF    | Without special chars or $$.$$$.$$$/$$$$-$$ |
+| Supports |                    Format                     |
+|:--------:|:---------------------------------------------:|
+|   CNPJ   |   Without special chars or *$$$.$$$.$$$-$$*   |
+|   CPF    | Without special chars or *$$.$$$.$$$/$$$$-$$* |
 
 ## Usage 
 
