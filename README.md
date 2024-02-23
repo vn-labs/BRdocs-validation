@@ -6,11 +6,11 @@ pip install brdocs-validation
 
 ## Supported docs and its formats
 
-| Supports |                    Format                     |
-|:--------:|:---------------------------------------------:|
-|   CNPJ   | Without special chars or *12.345.678/9012-34* |
-|   CPF    |   Without special chars or *123.456.789-01*   |
-|   CNH    |    Without special chars and only numbers     |
+| Supports |                     Format                      |
+|:--------:|:-----------------------------------------------:|
+|   CNPJ   | *12.345.678/9012-34* OR _Without special chars_ |
+|   CPF    |   *123.456.789-01* OR _Without special chars_   |
+|   CNH    |                  Only numbers                   |
 
 ## Usage 
 
@@ -24,5 +24,5 @@ class User(BaseModel):
     age: int
     cpf: CPF
     cnpj: CNPJ
-    CNH: CNH
+    cnh: CNH
 ```

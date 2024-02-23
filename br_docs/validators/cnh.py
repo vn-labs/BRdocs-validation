@@ -3,7 +3,7 @@ import re
 from br_docs.validators.base import CheckTwoDigits
 
 
-class CNH(CheckTwoDigits):
+class CNHv(CheckTwoDigits):
     Patterns = re.compile(r"^\d{11}$"),
 
     @classmethod

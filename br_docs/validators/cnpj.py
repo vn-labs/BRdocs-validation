@@ -3,7 +3,7 @@ import re
 from br_docs.validators.base import CheckTwoDigits
 
 
-class CNPJ(CheckTwoDigits):
+class CNPJv(CheckTwoDigits):
     Patterns = re.compile(r"^\d{14}$"), re.compile(r"^[0-9]{2}\.[0-9]{3}\.[0-9]{3}/[0-9]{4}-[0-9]{2}$"),
     CnpjAlgarisms = 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2,
 

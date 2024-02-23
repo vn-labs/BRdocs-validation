@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 from pydantic_core import PydanticCustomError
 
-from br_docs.validators.types import *
+from br_docs.validators.types.format import ValuesRegex
 
 
 class CheckTwoDigits(ABC, ValuesRegex):
