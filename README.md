@@ -1,3 +1,5 @@
+![Python 3.6](https://img.shields.io/badge/python-3.10-2334D058.svg)
+
 ## Install
 ```
 pip install brdocs-validation
