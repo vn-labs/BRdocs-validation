@@ -3,9 +3,15 @@ from abc import ABC, abstractmethod
 
 from pydantic_core import PydanticCustomError
 
+from br_docs.validators.types import *
 
-class Luhn(ABC):
-    """ Variations of Luhn's algorithm. """
+
+class CheckTwoDigits(ABC, ValuesRegex):
+
+    def __call__(self, value: str) -> str:
+        self.check_format(value)
+        self.validate(value)
+        return value
 
     def validate(self, value: str):
         numbers = list(map(int, re.findall(r"\d", value)))

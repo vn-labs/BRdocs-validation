@@ -1,10 +1,9 @@
 import re
-from abc import ABC
 
 from pydantic_core import PydanticCustomError
 
 
-class ValuesRegex(ABC):
+class ValuesRegex:
     """ Regex for given values """
 
     Patterns: tuple[re.Pattern]

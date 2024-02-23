@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "brdocs-validation"
-version = "0.0.2"
+version = "0.0.3"
 dependencies = [
   "pydantic>=2.6.1"
 ]
