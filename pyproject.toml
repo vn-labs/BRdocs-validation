@@ -51,7 +51,6 @@ description = run tests
 deps =
     pytest>=8
     pytest-sugar
-    pytest-cov
 commands =
     pytest {posargs:tests} --basetemp="{env_tmp_dir}"
 
