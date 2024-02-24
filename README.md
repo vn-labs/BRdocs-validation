@@ -1,6 +1,7 @@
 ![Test](https://github.com/vinicius-oa/BRdocs-validation/actions/workflows/test.yml/badge.svg)
 ![codecov](https://codecov.io/gh/vinicius-oa/BRdocs-validation/graph/badge.svg?token=Z211YIKO8L)
-![Python 3.6](https://img.shields.io/badge/python-3.9_|_3.10_|_3.11_|_3.12-2334D058.svg)
+[![PyPI version](https://badge.fury.io/py/brdocs-validation.svg)](https://badge.fury.io/py/brdocs-validation)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/brdocs-validation?color=2334D058)
 ![Pydantic V2](https://img.shields.io/badge/Pydantic_V2->=2.0-2334D058.svg)
 
 ## Install
