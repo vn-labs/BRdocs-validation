@@ -1,4 +1,6 @@
+![codecov](https://codecov.io/gh/vinicius-oa/BRdocs-validation/graph/badge.svg?token=Z211YIKO8L)
 ![Python 3.6](https://img.shields.io/badge/python-3.10-2334D058.svg)
+![Pydantic V2](https://img.shields.io/badge/Pydantic_V2->=2.6-2334D058.svg)
 
 ## Install
 ```
