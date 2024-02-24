@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools >= 61.0"]
+requires = ["setuptools >= 61.0", "wheel >= 0.41"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "brdocs-validation"
-version = "0.0.3"
+version = "0.0.1"
 dependencies = [
   "pydantic>=2.0"
 ]
@@ -15,9 +15,9 @@ authors = [
 maintainers = [
   {name = "Vinícius Aguiar", email = "vaguiararqdevsoftware@proton.me"}
 ]
-description = "Validates brazilian documents using typing hints in Pydantic's BaseModels."
+description = "Validate brazilian documents using Type Hints in classes inheriting Pydantic's (V2) BaseModel"
 readme = "README.md"
-keywords = ["pydantic", "validation", "brazilian documents", "documentos brasileiros", "validação", "cpf", "cnpj"]
+keywords = ["pydantic-v2", "cpf-validador", "cnpj-validador"]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Framework :: Pydantic :: 2",
@@ -36,6 +36,16 @@ classifiers = [
 [project.urls]
 Repository = "https://github.com/vinicius-oa/BRdocs-validation"
 
+[project.optional-dependencies]
+dev = [
+    "build",
+    "mypy",
+    "pytest",
+    "wheel",
+    "twine",
+    "tox",
+    "ruff"
+]
 
 [tool.tox]
 legacy_tox_ini = """

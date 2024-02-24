@@ -1,6 +1,6 @@
 import re
 
-from br_docs.validators.base import CheckTwoDigits
+from br_docs.validators import CheckTwoDigits
 
 
 class CNHv(CheckTwoDigits):

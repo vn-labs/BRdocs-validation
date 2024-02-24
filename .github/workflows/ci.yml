@@ -2,9 +2,16 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - 'main'
+    paths:
+      - 'br_docs/**'
   pull_request:
-    branches: [ "main" ]
+    types:
+      - opened
+      - synchronize
+    paths:
+      - 'br_docs/**'
 
 permissions:
   contents: read
