@@ -6,9 +6,9 @@ build-backend = "setuptools.build_meta"
 name = "brdocs-validation"
 version = "0.0.3"
 dependencies = [
-  "pydantic>=2.6.1"
+  "pydantic>=2.0"
 ]
-requires-python = ">= 3.10"
+requires-python = ">= 3.9"
 authors = [
   {name = "Vinícius Aguiar", email = "vaguiararqdevsoftware@proton.me"},
 ]
@@ -25,10 +25,39 @@ classifiers = [
   "Topic :: Software Development :: Build Tools",
   "License :: OSI Approved :: MIT License",
   "Natural Language :: English",
+  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: Implementation :: CPython",
   "Topic :: Software Development :: Libraries :: Python Modules"
 ]
 
 [project.urls]
 Repository = "https://github.com/vinicius-oa/BRdocs-validation"
+
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+requires =
+    tox>=4
+env_list = py{39,310,311,312}-pydantic{20,21,22,23,24,25,26}
+set_env =
+  TEMP = {env_tmp_dir}
+
+[testenv]
+description = run tests
+deps =
+    pytest>=8
+    pytest-sugar
+commands =
+    pytest --cov br_docs --basetemp="{env_tmp_dir}"
+
+[gh]
+python =
+    3.12 = py312
+    3.11 = py311
+    3.10 = py310
+    3.9 = py39
+"""
