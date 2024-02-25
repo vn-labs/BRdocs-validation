@@ -9,7 +9,6 @@ class CPFv(CheckDigits):
 
     @staticmethod
     def calculate_digits(non_digits: list[int]) -> tuple[int, int]:
-        """ CPF's digits checking algorithm. """
         calc = 11 - (sum((n * (10 - i)) for i, n in enumerate(non_digits)) % 11)
         if calc > 9:
             calc = 0

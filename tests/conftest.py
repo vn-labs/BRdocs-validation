@@ -34,3 +34,12 @@ def cnpj_list():
         1-88 line: https://web.archive.org/web/20240223150643/https://www.detran.df.gov.br/wp-content/uploads/2021/09/Empresas-CNH-Social.pdf
     """
     return open_valid_docs('cnpj.txt')
+
+
+@pytest.fixture()
+def nis_list():
+    """
+        1-56 line: https://web.archive.org/web/20240225200956/http://www.varzeagrande.mt.gov.br/storage/Anexos/18cd1d8751995dccb6116b97ab9e0ce7.pdf
+        56-356 line: http://www.adcon.rn.gov.br/ACERVO/SEARH/DOC/DOC000000000151962.PDF
+    """
+    return open_valid_docs('nis.txt')

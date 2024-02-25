@@ -9,10 +9,7 @@ class CNHv(CheckDigits):
 
     @classmethod
     def calculate_digits(cls, non_digits: list[int]) -> tuple[int, int]:
-        """
-            CNH's digits checking algorithm.
-            https://web.archive.org/web/20240223041941/https://siga0984.wordpress.com/2019/05/01/algoritmos-validacao-de-cnh/
-        """
+        """ https://web.archive.org/web/20240223041941/https://siga0984.wordpress.com/2019/05/01/algoritmos-validacao-de-cnh/ """
         largest_multipler, smallest_multiplier = 9, 1
         digit_one, digit_two = 0, 0
         is_digit_one_greater_than_nine = False
