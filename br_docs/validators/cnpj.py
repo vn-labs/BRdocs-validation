@@ -1,11 +1,12 @@
 import re
 
-from br_docs.validators import CheckTwoDigits
+from br_docs.validators import CheckDigits
 
 
-class CNPJv(CheckTwoDigits):
+class CNPJv(CheckDigits):
     Patterns = re.compile(r"^\d{14}$"), re.compile(r"^[0-9]{2}\.[0-9]{3}\.[0-9]{3}/[0-9]{4}-[0-9]{2}$"),
     CnpjAlgarismsMultipliers = 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2,
+    CHECK_DIGITS = 2
 
     @classmethod
     def calculate_digits(cls, non_digits: list[int]) -> tuple[int, int]:

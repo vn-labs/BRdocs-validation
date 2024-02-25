@@ -6,7 +6,9 @@ from pydantic_core import PydanticCustomError
 from br_docs.validators.types.format import ValuesRegex
 
 
-class CheckTwoDigits(ABC, ValuesRegex):
+class CheckDigits(ABC, ValuesRegex):
+    CHECK_DIGITS: int
+    """ How many check digits does a value has """
 
     def __call__(self, value: str) -> str:
         self.check_format(value)
@@ -15,14 +17,14 @@ class CheckTwoDigits(ABC, ValuesRegex):
 
     def validate(self, value: str):
         numbers = list(map(int, re.findall(r"\d", value)))
-        # Check digits
-        digit_one, digit_two = numbers.pop(-2), numbers.pop(-1)
-        digit_one_calculated, digit_two_calculated = self.calculate_digits(numbers)
-        if digit_one_calculated is not digit_one or digit_two_calculated is not digit_two:
-            raise PydanticCustomError(
-                'invalid',
-                'Invalid value'
-            )
+        check_digits = [numbers.pop(x) for x in range(-self.CHECK_DIGITS, 0)]
+        digits_calculated = self.calculate_digits(numbers)
+        for check_digit, digit_calculated in zip(check_digits, digits_calculated):
+            if check_digit != digit_calculated:
+                raise PydanticCustomError(
+                    'invalid',
+                    'Invalid value'
+                )
 
     @staticmethod
     @abstractmethod

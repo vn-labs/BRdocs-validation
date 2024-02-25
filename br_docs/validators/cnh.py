@@ -1,10 +1,11 @@
 import re
 
-from br_docs.validators import CheckTwoDigits
+from br_docs.validators import CheckDigits
 
 
-class CNHv(CheckTwoDigits):
+class CNHv(CheckDigits):
     Patterns = re.compile(r"^\d{11}$"),
+    CHECK_DIGITS = 2
 
     @classmethod
     def calculate_digits(cls, non_digits: list[int]) -> tuple[int, int]:
