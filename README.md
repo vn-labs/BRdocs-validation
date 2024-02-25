@@ -12,23 +12,23 @@ pip install brdocs-validation
 
 ## Supported docs and its formats
 
-| Supports |                     Format                      |
-|:--------:|:-----------------------------------------------:|
-|   CNPJ   | *12.345.678/9012-34* OR _Without special chars_ |
-|   CPF    |   *123.456.789-01* OR _Without special chars_   |
-|   CNH    |                  Only numbers                   |
+|     Supports      |                     Format                      |
+|:-----------------:|:-----------------------------------------------:|
+|       CNPJ        | *12.345.678/9012-34* OR _Without special chars_ |
+|        CPF        |   *123.456.789-01* OR _Without special chars_   |
+|        CNH        |                  Only numbers                   |
+| NIS/PIS/PASEP/NIT |       *123.45678.90-1* OR _Only numbers_        |
 
 ## Usage 
 
 ```python
-from br_docs import CPF, CNPJ, CNH
+from br_docs import `Supports`
 from pydantic import BaseModel
 
 
-class User(BaseModel): 
-    name: str
-    age: int
+class User(BaseModel):
     cpf: CPF
     cnpj: CNPJ
     cnh: CNH
+    nis: NIS
 ```
