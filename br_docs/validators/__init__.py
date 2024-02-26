@@ -28,5 +28,5 @@ class CheckDigits(ABC, ValuesRegex):
 
     @staticmethod
     @abstractmethod
-    def calculate_digits(non_digits) -> tuple[int, ...]:   # pragma: no cover
+    def calculate_digits(non_digits: list[int]) -> tuple[int, ...]:   # pragma: no cover
         ...

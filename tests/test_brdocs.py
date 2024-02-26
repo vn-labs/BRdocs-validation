@@ -3,7 +3,7 @@ from contextlib import contextmanager
 from pydantic import create_model
 from pydantic_core import ValidationError
 
-from br_docs import CNH, CPF, CNPJ, NIS
+from br_docs import CNH, CPF, CNPJ, NIS, CNS, RENAVAM
 
 
 @contextmanager
@@ -37,4 +37,14 @@ def test_cnpj(cnpj_list):
 
 def test_nis(nis_list):
     with validate(model_name='TestNIS', values=nis_list, value_type=NIS):
+        pass
+
+
+def test_cns(cns_list):
+    with validate(model_name='TestCNS', values=cns_list, value_type=CNS):
+        pass
+
+
+def test_renavam(renavam_list):
+    with validate(model_name='TestRENAVAM', values=renavam_list, value_type=RENAVAM):
         pass

@@ -24,6 +24,7 @@ def cnh_list():
 def cpf_list():
     """
         1-60 line: https://web.archive.org/web/20240223042316/https://www.detran.ac.gov.br/wp-content/uploads/2022/06/Lista-de-Selecionados-CNH-Social.pdf
+        61-122 line: https://web.archive.org/web/20240226031446/https://www.detran.ac.gov.br/wp-content/uploads/2022/06/Lista-de-Selecionados-CNH-Social.pdf
     """
     return open_valid_docs('cpfs.txt')
 
@@ -40,6 +41,25 @@ def cnpj_list():
 def nis_list():
     """
         1-56 line: https://web.archive.org/web/20240225200956/http://www.varzeagrande.mt.gov.br/storage/Anexos/18cd1d8751995dccb6116b97ab9e0ce7.pdf
-        56-356 line: http://www.adcon.rn.gov.br/ACERVO/SEARH/DOC/DOC000000000151962.PDF
+        57-356 line: http://www.adcon.rn.gov.br/ACERVO/SEARH/DOC/DOC000000000151962.PDF
     """
     return open_valid_docs('nis.txt')
+
+
+@pytest.fixture()
+def cns_list():
+    """
+        1-61 line: https://web.archive.org/web/20240226014647/https://simaodias.se.gov.br/sites/simaodias.se.gov.br/files/LISTA%20VACINADOS%20D2%20IDOSOS%20-%2010032021%20-%20FORMULARIO.pdf
+        62-182 line: https://web.archive.org/web/20240226015830/https://altamira.pa.gov.br/wp-content/uploads/2021/07/LISTA-DE-VACINADOS-20-07.pdf
+    """
+    return open_valid_docs('cns.txt')
+
+
+@pytest.fixture()
+def renavam_list():
+    """
+        1-173 line: https://web.archive.org/web/20240226050829/https://www.euamoleilao.com.br/imprimir/0067-leilao-do-detran-de-sao-paulo
+        174-257 line: https://web.archive.org/web/20240226051016/https://www.euamoleilao.com.br/imprimir/0139-repasse-leilao-ciretran-s-sebastiao
+        258-687 line: https://web.archive.org/web/20240226051542/https://portal.tjpr.jus.br/pesquisa_athos/publico/carregarAnexo.do;jsessionid=5ff0c586fab5cb74176b49c48765?tjpr.url.crypto=16c74de0ca500657bb7c1cc39118d26e6a12b4f4c9aa9444c033d87933160fa249878bb1b73255ac
+    """
+    return open_valid_docs('renavam.txt')
