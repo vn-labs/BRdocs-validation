@@ -8,7 +8,7 @@ version = "0.3.0"
 dependencies = [
   "pydantic>=2.0"
 ]
-requires-python = ">= 3.9"
+requires-python = ">= 3.10"
 authors = [
   {name = "Vinícius Aguiar", email = "vaguiararqdevsoftware@proton.me"},
 ]
@@ -17,7 +17,7 @@ maintainers = [
 ]
 description = "Validate brazilian documents using Type Hints in classes inheriting Pydantic's (V2) BaseModel"
 readme = "README.md"
-keywords = ["pydantic-v2", "cpf-validador", "cnpj-validador", "validador-pispasep"]
+keywords = ["pydantic-v2", "cpf-validador", "cnpj-validador", "validador-pispasep", "validador-titulo-eleitor"]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Framework :: Pydantic :: 2",
@@ -25,7 +25,6 @@ classifiers = [
   "Topic :: Software Development :: Build Tools",
   "License :: OSI Approved :: MIT License",
   "Natural Language :: English",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
@@ -52,7 +51,7 @@ legacy_tox_ini = """
 [tox]
 requires =
     tox>=4
-env_list = py{39,310,311,312}-pydantic{20,21,22,23,24,25,26}
+env_list = py{310,311,312}-pydantic{20,21,22,23,24,25,26}
 set_env =
   TEMP = {env_tmp_dir}
 
@@ -69,5 +68,4 @@ python =
     3.12 = py312-pydantic{20,21,22,23,24,25,26}
     3.11 = py311-pydantic{20,21,22,23,24,25,26}
     3.10 = py310-pydantic{20,21,22,23,24,25,26}
-    3.9 = py39-pydantic{20,21,22,23,24,25,26}
 """
