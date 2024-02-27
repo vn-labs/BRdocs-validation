@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "brdocs-validation"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
   "pydantic>=2.0"
 ]
@@ -17,7 +17,7 @@ maintainers = [
 ]
 description = "Validate brazilian documents using Type Hints in classes inheriting Pydantic's (V2) BaseModel"
 readme = "README.md"
-keywords = ["pydantic-v2", "cpf-validador", "cnpj-validador"]
+keywords = ["pydantic-v2", "cpf-validador", "cnpj-validador", "validador-pispasep"]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Framework :: Pydantic :: 2",
