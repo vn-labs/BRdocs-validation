@@ -63,3 +63,11 @@ def renavam_list():
         258-687 line: https://web.archive.org/web/20240226051542/https://portal.tjpr.jus.br/pesquisa_athos/publico/carregarAnexo.do;jsessionid=5ff0c586fab5cb74176b49c48765?tjpr.url.crypto=16c74de0ca500657bb7c1cc39118d26e6a12b4f4c9aa9444c033d87933160fa249878bb1b73255ac
     """
     return open_valid_docs('renavam.txt')
+
+
+@pytest.fixture()
+def te_list():
+    """
+        1-159 line: https://web.archive.org/web/20240226104403/https://issuu.com/psol.df/docs/lista_de_filiados_ao_psol_df___dist
+    """
+    return open_valid_docs('te.txt')
