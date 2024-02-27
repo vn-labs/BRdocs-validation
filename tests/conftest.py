@@ -37,7 +37,7 @@ def cnpj_list():
     return open_valid_docs('cnpj.txt')
 
 
-@pytest.fixture()
+@pytest.fixture
 def nis_list():
     """
         1-56 line: https://web.archive.org/web/20240225200956/http://www.varzeagrande.mt.gov.br/storage/Anexos/18cd1d8751995dccb6116b97ab9e0ce7.pdf
@@ -46,7 +46,7 @@ def nis_list():
     return open_valid_docs('nis.txt')
 
 
-@pytest.fixture()
+@pytest.fixture
 def cns_list():
     """
         1-61 line: https://web.archive.org/web/20240226014647/https://simaodias.se.gov.br/sites/simaodias.se.gov.br/files/LISTA%20VACINADOS%20D2%20IDOSOS%20-%2010032021%20-%20FORMULARIO.pdf
@@ -55,7 +55,7 @@ def cns_list():
     return open_valid_docs('cns.txt')
 
 
-@pytest.fixture()
+@pytest.fixture
 def renavam_list():
     """
         1-173 line: https://web.archive.org/web/20240226050829/https://www.euamoleilao.com.br/imprimir/0067-leilao-do-detran-de-sao-paulo
@@ -65,9 +65,15 @@ def renavam_list():
     return open_valid_docs('renavam.txt')
 
 
-@pytest.fixture()
+@pytest.fixture
 def te_list():
     """
         1-159 line: https://web.archive.org/web/20240226104403/https://issuu.com/psol.df/docs/lista_de_filiados_ao_psol_df___dist
     """
     return open_valid_docs('te.txt')
+
+
+@pytest.fixture
+def cert_list():
+    """ google dorks: intext:"DATA DE NASCIMENTO (POR EXTENSO)" AND intext:"CERTIDÃO DE <CASAMENTO|ÓBITO|NASCIMENTO>" AND intext:"matricula" AND ext:pdf """
+    return open_valid_docs('cert.txt')
