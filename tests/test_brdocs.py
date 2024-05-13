@@ -1,5 +1,6 @@
 from contextlib import contextmanager
 
+import pytest
 from pydantic import create_model
 from pydantic_core import ValidationError
 
@@ -14,7 +15,7 @@ def validate(model_name: str, values, value_type):
                 m = create_model(model_name, param=(value_type, ...))
                 m(param=value)
             except ValidationError as exc:
-                assert False, f'{exc}: {value}'
+                raise exc
         yield
     finally:
         pass
@@ -66,5 +67,10 @@ def test_valid_sei(valid_sei_list):
 
 
 def test_invalid_sei(invalid_sei_list):
-    with validate(model_name='TestSEI', values=invalid_sei_list, value_type=SEI):
-        pass
+    with pytest.raises(ValidationError):
+        with validate(
+            model_name='TestSEI',
+            values=invalid_sei_list,
+            value_type=SEI,
+        ):
+            pass
