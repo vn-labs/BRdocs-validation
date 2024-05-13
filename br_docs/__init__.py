@@ -9,6 +9,7 @@ from br_docs.validators.cpf import CPFv
 from br_docs.validators.nis import NISv
 from br_docs.validators.renavam import RENAVAMv
 from br_docs.validators.te import TEv
+from br_docs.validators.sei import SEIv
 
 
 CPF = Annotated[str, AfterValidator(CPFv())]
@@ -19,3 +20,4 @@ CNS = Annotated[str, AfterValidator(CNSv())]
 RENAVAM = Annotated[str, AfterValidator(RENAVAMv())]
 TE = Annotated[str, AfterValidator(TEv())]
 CERT = Annotated[str, AfterValidator(CERTv())]
+SEI = Annotated[str, AfterValidator(SEIv())]
