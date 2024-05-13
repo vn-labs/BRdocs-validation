@@ -22,10 +22,12 @@ pip install brdocs-validation
 |      RENAVAM      |                                           |                  Only numbers                   | Length: _9, 10 & 11_ | 
 |        TE         |             Título de eleitor             |                  Only numbers                   |                      |
 |       CERT        | Certidão de casamento, nascimento e óbito |                  Only numbers                   |                      | 
+|        SEI        |         Número do Processo SEI            | 12345-67890123/4567-89 OR without special chars |                      |
+
 ## Usage 
 
 ```python
-from br_docs import CNPJ, CPF, CNH, NIS, CNS, RENAVAM, TE, CERT
+from br_docs import CNPJ, CPF, CNH, NIS, CNS, RENAVAM, TE, CERT, SEI
 from pydantic import BaseModel
 
 
@@ -38,4 +40,5 @@ class User(BaseModel):
     renavam: RENAVAM
     te: TE
     cert: CERT
+    sei: SEI
 ```
