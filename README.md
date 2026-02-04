@@ -1,5 +1,5 @@
-![Test](https://github.com/vn-labs/BRdocs-validation/actions/workflows/test.yml/badge.svg)
-![codecov](https://codecov.io/gh/vn-labs/BRdocs-validation/graph/badge.svg?token=Z211YIKO8L)
+![Test](https://github.com/vinicius-oa/BRdocs-validation/actions/workflows/test.yml/badge.svg)
+![codecov](https://codecov.io/gh/vinicius-oa/BRdocs-validation/graph/badge.svg?token=Z211YIKO8L)
 ![PyPI - Version](https://img.shields.io/pypi/v/brdocs-validation?label=pypi%20package&color=2334D058)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/brdocs-validation?color=2334D058)
 ![Pydantic V2](https://img.shields.io/badge/Pydantic_V2->=2.0-2334D058.svg)
