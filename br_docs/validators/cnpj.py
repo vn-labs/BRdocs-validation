@@ -13,13 +13,13 @@ class CNPJv(CheckDigits):
     """
 
     Patterns = (
-        re.compile(r"^\d{14}$"),  # Numeric unformatted
+        re.compile(r'^\d{14}$'),  # Numeric unformatted
         re.compile(
-            r"^[0-9]{2}\.[0-9]{3}\.[0-9]{3}/[0-9]{4}-[0-9]{2}$"
+            r'^[0-9]{2}\.[0-9]{3}\.[0-9]{3}/[0-9]{4}-[0-9]{2}$'
         ),  # Numeric formatted
-        re.compile(r"^[0-9A-Z]{12}\d{2}$", re.IGNORECASE),  # Alphanumeric unformatted
+        re.compile(r'^[0-9A-Z]{12}\d{2}$', re.IGNORECASE),  # Alphanumeric unformatted
         re.compile(
-            r"^[0-9A-Z]{2}\.[0-9A-Z]{3}\.[0-9A-Z]{3}/[0-9A-Z]{4}-\d{2}$", re.IGNORECASE
+            r'^[0-9A-Z]{2}\.[0-9A-Z]{3}\.[0-9A-Z]{3}/[0-9A-Z]{4}-\d{2}$', re.IGNORECASE
         ),  # Alphanumeric formatted
     )
     CHECK_DIGITS = 2

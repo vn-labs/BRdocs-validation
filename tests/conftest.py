@@ -1,13 +1,14 @@
-from typing import Iterator
-import pytest
+from collections.abc import Iterator
 from pathlib import Path
+
+import pytest
 
 current_path = Path(__file__).parent
 
 
 def open_docs(path: str) -> Iterator[str]:
     with open(str(current_path.joinpath(path))) as f:
-        return map(lambda x: x.strip('\n'), f.readlines())
+        return (line.strip('\n') for line in f.readlines())
 
 
 @pytest.fixture

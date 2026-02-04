@@ -48,6 +48,33 @@ dev = [
     "ruff"
 ]
 
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B", "C4", "Q"]
+ignore = ["E501", "B905", "B904"]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+docstring-quotes = "double"
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.uv]
+dev-dependencies = [
+    "build",
+    "mypy",
+    "pytest>=8",
+    "pytest-sugar",
+    "wheel",
+    "twine",
+    "tox>=4",
+    "ruff",
+]
+
 [tool.tox]
 legacy_tox_ini = """
 [tox]

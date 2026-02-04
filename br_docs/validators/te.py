@@ -7,7 +7,7 @@ from br_docs.validators import CheckDigits
 
 class TEv(CheckDigits):
     """ Titulo de eleitor """
-    Patterns = re.compile(r"^\d{12}$"),
+    Patterns = re.compile(r'^\d{12}$'),
 
     def validate(self, value: str):
         valid_value = self.calculate_digits(list(map(int, value)))[0]

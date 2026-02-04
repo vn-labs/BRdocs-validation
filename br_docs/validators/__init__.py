@@ -16,7 +16,7 @@ class CheckDigits(ABC, ValuesRegex):
         return value
 
     def validate(self, value: str):
-        numbers = list(map(int, re.findall(r"\d", value)))
+        numbers = list(map(int, re.findall(r'\d', value)))
         check_digits = [numbers.pop(x) for x in range(-self.CHECK_DIGITS, 0)]
         digits_calculated = self.calculate_digits(numbers)
         for check_digit, digit_calculated in zip(check_digits, digits_calculated):

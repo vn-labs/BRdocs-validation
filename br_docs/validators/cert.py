@@ -5,7 +5,7 @@ from br_docs.validators import CheckDigits
 
 class CERTv(CheckDigits):
     """ Certidões de casamento, nascimento e óbito """
-    Patterns = re.compile(r"^\d{32}$"),
+    Patterns = re.compile(r'^\d{32}$'),
     CHECK_DIGITS = 2
     CertAlgarismsMultipliers = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
 
