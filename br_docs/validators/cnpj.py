@@ -27,16 +27,16 @@ class CNPJv(CheckDigits):
 
     def validate(self, value: str):
         """Validate CNPJ with alphanumeric support."""
-        clean = value.upper().replace(".", "").replace("/", "").replace("-", "")
+        clean = value.upper().replace('.', '').replace('/', '').replace('-', '')
         base_chars = clean[:-2]
         check_str = clean[-2:]
         try:
             check_1, check_2 = int(check_str[0]), int(check_str[1])
         except ValueError:
-            raise PydanticCustomError("invalid", "Invalid value")
+            raise PydanticCustomError('invalid', 'Invalid value')
         calc_1, calc_2 = self.calculate_digits_alphanumeric(base_chars)
         if check_1 != calc_1 or check_2 != calc_2:
-            raise PydanticCustomError("invalid", "Invalid value")
+            raise PydanticCustomError('invalid', 'Invalid value')
 
     @staticmethod
     def char_to_value(char: str) -> int:
