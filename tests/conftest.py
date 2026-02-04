@@ -1,13 +1,14 @@
-from typing import Iterator
-import pytest
+from collections.abc import Iterator
 from pathlib import Path
+
+import pytest
 
 current_path = Path(__file__).parent
 
 
 def open_docs(path: str) -> Iterator[str]:
     with open(str(current_path.joinpath(path))) as f:
-        return map(lambda x: x.strip('\n'), f.readlines())
+        return (line.strip('\n') for line in f.readlines())
 
 
 @pytest.fixture
@@ -87,3 +88,12 @@ def valid_sei_list():
 @pytest.fixture
 def invalid_sei_list():
     return open_docs('invalid_sei.txt')
+
+
+@pytest.fixture
+def alphanumeric_cnpj_list():
+    """
+    Alphanumeric CNPJ test data following SERPRO 2026 specification.
+    Reference: https://www.serpro.gov.br/ (calculodvcnpjalfanaumerico.pdf)
+    """
+    return open_docs('alphanumeric_cnpj.txt')

@@ -1,5 +1,6 @@
+from typing import Annotated
+
 from pydantic.functional_validators import AfterValidator
-from typing_extensions import Annotated
 
 from br_docs.validators.cert import CERTv
 from br_docs.validators.cnh import CNHv
@@ -8,9 +9,8 @@ from br_docs.validators.cns import CNSv
 from br_docs.validators.cpf import CPFv
 from br_docs.validators.nis import NISv
 from br_docs.validators.renavam import RENAVAMv
-from br_docs.validators.te import TEv
 from br_docs.validators.sei import SEIv
-
+from br_docs.validators.te import TEv
 
 CPF = Annotated[str, AfterValidator(CPFv())]
 CNPJ = Annotated[str, AfterValidator(CNPJv())]

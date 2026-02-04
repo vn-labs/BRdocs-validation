@@ -4,7 +4,7 @@ import pytest
 from pydantic import create_model
 from pydantic_core import ValidationError
 
-from br_docs import CNH, CPF, CNPJ, NIS, CNS, RENAVAM, TE, CERT, SEI
+from br_docs import CERT, CNH, CNPJ, CNS, CPF, NIS, RENAVAM, SEI, TE
 
 
 @contextmanager
@@ -74,3 +74,12 @@ def test_invalid_sei(invalid_sei_list):
             value_type=SEI,
         ):
             pass
+
+
+def test_alphanumeric_cnpj(alphanumeric_cnpj_list):
+    with validate(
+        model_name='TestAlphanumericCNPJ',
+        values=alphanumeric_cnpj_list,
+        value_type=CNPJ,
+    ):
+        pass

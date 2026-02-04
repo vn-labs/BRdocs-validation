@@ -13,6 +13,6 @@ class ValuesRegex:
             next(filter(lambda x: x.match(value), self.Patterns))
         except StopIteration:
             raise PydanticCustomError(
-                "format",
+                'format',
                 "Invalid value's format"
             )

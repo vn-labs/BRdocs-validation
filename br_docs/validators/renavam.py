@@ -4,7 +4,7 @@ from br_docs.validators import CheckDigits
 
 
 class RENAVAMv(CheckDigits):
-    Patterns = re.compile(r"^\d{9,11}$"),
+    Patterns = re.compile(r'^\d{9,11}$'),
     CHECK_DIGITS = 1
 
     @staticmethod

@@ -6,7 +6,7 @@ from br_docs.validators import CheckDigits
 
 
 class CNSv(CheckDigits):
-    Patterns = re.compile(r"^\d{15}$"),
+    Patterns = re.compile(r'^\d{15}$'),
 
     def validate(self, value: str):
         valid_value = self.calculate_digits(list(map(int, value)))[0]

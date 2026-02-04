@@ -4,7 +4,7 @@ from br_docs.validators import CheckDigits
 
 
 class CPFv(CheckDigits):
-    Patterns = re.compile(r"^(?!(\d)\1{10}$)\d{11}$"), re.compile(r"^[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}$")
+    Patterns = re.compile(r'^(?!(\d)\1{10}$)\d{11}$'), re.compile(r'^[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}$')
     CHECK_DIGITS = 2
 
     @staticmethod

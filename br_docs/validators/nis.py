@@ -6,7 +6,7 @@ from br_docs.validators import CheckDigits
 class NISv(CheckDigits):
     """ NIS is the number of NIT, PIS, PASEP and NIS itself. """
 
-    Patterns = re.compile(r"^\d{11}$"), re.compile(r"^[0-9]{3}\.[0-9]{5}\.[0-9]{2}-[0-9]$")
+    Patterns = re.compile(r'^\d{11}$'), re.compile(r'^[0-9]{3}\.[0-9]{5}\.[0-9]{2}-[0-9]$')
     NisAlgarismsMultipliers = 3, 2, 9, 8, 7, 6, 5, 4, 3, 2
     CHECK_DIGITS = 1
 

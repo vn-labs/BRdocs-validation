@@ -4,7 +4,7 @@ from br_docs.validators import CheckDigits
 
 
 class CNHv(CheckDigits):
-    Patterns = re.compile(r"^\d{11}$"),
+    Patterns = re.compile(r'^\d{11}$'),
     CHECK_DIGITS = 2
 
     @classmethod
