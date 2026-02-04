@@ -4,16 +4,18 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "brdocs-validation"
-version = "0.4.0"
+version = "0.5.0"
 dependencies = [
   "pydantic>=2.0"
 ]
 requires-python = ">= 3.10"
 authors = [
   {name = "Vinícius Aguiar", email = "vaguiararqdevsoftware@proton.me"},
+  {name = "Rafael Kamimura", email = "rafael.kamimura@proton.me"},
 ]
 maintainers = [
-  {name = "Vinícius Aguiar", email = "vaguiararqdevsoftware@proton.me"}
+  {name = "Vinícius Aguiar", email = "vaguiararqdevsoftware@proton.me"},
+  {name = "Rafael Kamimura", email = "rafael.kamimura@proton.me"},
 ]
 description = "Validate brazilian documents using Type Hints in classes inheriting Pydantic's (V2) BaseModel"
 readme = "README.md"
